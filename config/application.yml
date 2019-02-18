@@ -25,4 +25,6 @@ mail_password: ""
 bugsnag_rails_token: ""
 skylight_token: ""
 mixpanel_token: ""
-client_dev_port: "3001"
+devise_jwt_secret_key: <%= "0defb5b2e4420f183fdfc2ce805c570368fa42f235410dc2bc58b346a1562d94812c77b252d27f0bc27a648931"\
+                         "e7a091965414d4d5b8e33bfd91f42243d81d3f" %>
+client_dev_port: "3000"

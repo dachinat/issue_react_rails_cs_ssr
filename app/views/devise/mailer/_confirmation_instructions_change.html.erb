@@ -1,0 +1,29 @@
+<% content_for :title do %>
+  <p><%= t("devise.mail.confirmation.change.hello", name: @resource.email) %></p>
+  <br/>
+  <p><%= t("devise.mail.confirmation.change.header") %></p>
+<% end %>
+
+<% content_for :body do %>
+  <p><%= t("devise.mail.confirmation.change.body") %></p>
+  <p><%= t("devise.mail.confirmation.change.body_token", token: @token) %></p>
+  <p><%= t("devise.mail.confirmation.change.body_ref", link: link_to(t("devise.mail.confirmation.body_link_text"),
+                                                                     with_base_url("#/auth/confirm/#{@token}")
+  )).html_safe %></p>
+<% end %>
+
+<% content_for :body2 do %>
+  <p><%= t("devise.mail.confirmation.change.footer") %></p>
+<% end %>
+
+<% content_for :buttons do %>
+  <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto;">
+    <tr>
+      <td style="border-radius: 3px; text-align: center;" class="button-td button-a-td">
+        <a href="<%= with_base_url("#/auth/confirm/#{@token}") %>" class="button-a">
+          <span style="color:#ffffff;" class="button-link">&nbsp;&nbsp;&nbsp;&nbsp;<%=t("devise.mail.confirmation.change.button")%>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        </a>
+      </td>
+    </tr>
+  </table>
+<% end %>

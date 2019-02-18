@@ -1,24 +1,14 @@
-# README
+# MailSnag v2
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Project
 
-Things you may want to cover:
+A Rails 6 project was generated using
 
-* Ruby version
+```
+rails new mail_snag_v2 -T --webpack=react --database=postgresql --skip-spring --skip-turbolinks
+```
 
-* System dependencies
+## Todo
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Update mailer template (Uses old design)
+* Add Mixpanel react

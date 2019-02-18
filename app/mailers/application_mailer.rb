@@ -1,4 +1,8 @@
+# frozen_string_literal: true
+
 class ApplicationMailer < ActionMailer::Base
-  default from: 'from@example.com'
-  layout 'mailer'
+  add_template_helper(EmailHelper)
+
+  default from: "MailSnag Support <support@mailsnag.com>"
+  layout "mailer"
 end

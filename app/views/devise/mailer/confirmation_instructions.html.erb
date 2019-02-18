@@ -1,0 +1,5 @@
+<% if @resource.unconfirmed_email %>
+  <%= render "confirmation_instructions_change" %>
+<% else %>
+  <%= render "confirmation_instructions_new" %>
+<% end %>

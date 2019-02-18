@@ -22,9 +22,31 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# Ignore Webpacker packs.
 /public/packs
 /public/packs-test
+
+# Ignore yarn related files.
 /node_modules
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+# Ignore IDE specific files.
+/.idea
+/.vscode
+*.sublime-project
+*.sublime-workspace
+
+# Ignore code coverage files.
+coverage
+/coverage/*
+/spec/examples.txt
+
+# Ignore node environment files.
+.env
+.env.production
+
+# Ignore application configuration.
+/config/application.yml

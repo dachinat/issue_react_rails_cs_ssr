@@ -28,6 +28,9 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  # Deliver with letter_opener gem
+  config.action_mailer.delivery_method = :letter_opener
+
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
 
@@ -45,6 +48,9 @@ Rails.application.configure do
   # Highlight code that triggered database queries in logs.
   config.active_record.verbose_query_logs = true
 
+  # Post Devise configuration to ensure default url options
+  config.action_mailer.default_url_options = { protocol: "http", host: "localhost", port: 3000 }
+
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
@@ -59,4 +65,11 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  # Set up ActionCable connection url
+  config.action_cable.url = "ws://localhost:3000/cable"
+
+  # Allow requests to lvh.me
+  config.hosts << "lvh.me"
+  config.hosts << "c65015a1.ngrok.io"
 end
